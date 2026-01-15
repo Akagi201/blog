@@ -1,0 +1,33 @@
+# Typstify Example Site Configuration
+# This demonstrates all available configuration options.
+
+[site]
+title = "Akagi201 Blog"
+description = "Exploring the frontier of Web3 and AI"
+base_url = "https://akjong.com"
+default_language = "en"
+author = "Akagi201"
+
+# Language-specific overrides
+[languages.en]
+name = "English"
+
+[languages.zh]
+name = "中文"
+title = "Akagi201 博客"
+description = "探索 Web3 与 AI 的前沿领域"
+
+[build]
+output_dir = "public"
+minify = true
+syntax_theme = "base16-ocean.dark"
+drafts = false
+
+[search]
+enabled = true
+index_fields = ["title", "body", "tags"]
+chunk_size = 65536
+
+[rss]
+enabled = true
+limit = 20
