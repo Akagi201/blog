@@ -4,7 +4,7 @@
 [site]
 title = "Akagi201 Blog"
 description = "Exploring the frontier of Web3 and AI"
-base_url = "https://akjong.com"
+host = "https://akjong.com"
 default_language = "en"
 author = "Akagi201"
 
