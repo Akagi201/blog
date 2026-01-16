@@ -25,10 +25,16 @@ jobs:
           command: build
           config: config.toml
           output: public
+          host: https://akjong.com
+          base-path: ""
+
+      - name: Fix permissions
+        if: always()
+        run: sudo chown -R $USER:$USER .
 
       - name: Deploy to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: deploy
+          command: deploy --config wrangler.jsonc
